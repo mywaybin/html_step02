@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>position03 : hover,position 실습</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <style>
         * {
             margin: 0;
@@ -68,6 +69,27 @@
             align-items: center;
 
             opacity: 1;
+        }
+
+        .inner figure .box2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            font-size: 20px;
+            padding: 10px 5px;
+            transform: translate(0, 100%);
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid #ddd;
+
+            transition: 0.5s;
+        }
+
+        .inner figure:hover .box2 {
+            transform: translate(0, 0);
         }
 
         .inner figure .box3 {
@@ -134,6 +156,10 @@
             </figure>
             <figure>
                 <img src="./img_02.jpg" alt="">
+                <div class="box2">
+                    <i class="xi-cart"></i>
+                    <i class="xi-heart"></i>
+                </div>
             </figure>
             <figure>
                 <img src="./img_03.jpg" alt="">
